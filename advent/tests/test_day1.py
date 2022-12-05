@@ -6,25 +6,33 @@ def test_trivial_input():
     """) == 1000
 
 def test_sample_input():
-    assert day1.most_cals("""
-    1000
-    2000
-    3000
+    assert day1.most_cals(sample_input) == 24000
 
-    4000
+def test_top_cals_sample_input():
+    assert day1.top_cals(sample_input, 3) == 45000
 
-    5000
-    6000
+sample_input = """
+1000
+2000
+3000
 
-    7000
-    8000
-    9000
+4000
 
-    10000
-    """) == 24000
+5000
+6000
+
+7000
+8000
+9000
+
+10000
+"""
 
 def test_puzzle_input():
     assert day1.most_cals(puzzle_input) == 69281
+
+def test_top_cals_puzzle_input():
+    assert day1.top_cals(puzzle_input, 3) == 201524
 
 puzzle_input = """
 9195
