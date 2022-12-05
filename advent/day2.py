@@ -1,8 +1,9 @@
+from dataclasses import dataclass
+
 class _Rule:
-    def __init__(self, beats, equal, innate_score):
-        self.beats: str = beats
-        self.equal: str = equal
-        self.innate_score: int = innate_score
+    beats: str
+    equal: str
+    innate_score: int
 
 _rps_rules = {
     'X': _Rule(beats='C', equal='A', innate_score=1),
