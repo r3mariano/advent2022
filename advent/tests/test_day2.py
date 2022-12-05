@@ -1,8 +1,11 @@
-from advent.day2 import rps
+from advent.day2 import rps, rps2
 
 
 def test_rps_sample_input():
     assert rps(sample_input) == 15
+
+def test_rps2_sample_input():
+    assert rps2(sample_input) == 12
 
 sample_input = """
 A Y
@@ -12,6 +15,9 @@ C Z
 
 def test_rps_puzzle_input():
     assert rps(puzzle_input) == 11449
+
+def test_rps2_puzzle_input():
+    assert rps2(puzzle_input) == 13187
 
 puzzle_input = """
 B Z
