@@ -1,3 +1,4 @@
 .hermit/
+.pytest_cache/
 *.pyc
 

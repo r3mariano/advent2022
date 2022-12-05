@@ -4,7 +4,7 @@ it's advent of code time
 
 ## How to read this code
 
-There is no code. Code will happen. Rotate some code in your mind.
+See `advent/`.
 
 ## Talking tools
 - I'm using [Hermit](https://github.com/cashapp/hermit) to manage build tools. It's kind of like
