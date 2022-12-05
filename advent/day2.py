@@ -59,3 +59,5 @@ def rps2(input: str) -> int:
             continue
         total += _rps2_lookup[line]
     return total
+
+t=lambda i:sum([3,1,2,4,5,6,8,9,7][ord(l[0])+ord(l[2])*3-329]for l in i.split('\n'))

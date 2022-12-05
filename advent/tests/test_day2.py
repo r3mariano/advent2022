@@ -1,4 +1,4 @@
-from advent.day2 import rps, rps2
+from advent.day2 import rps, rps2, t
 
 
 def test_rps_sample_input():
@@ -7,11 +7,12 @@ def test_rps_sample_input():
 def test_rps2_sample_input():
     assert rps2(sample_input) == 12
 
-sample_input = """
-A Y
+def test_golfed_sample():
+    assert t(sample_input) == 12
+
+sample_input = """A Y
 B X
-C Z
-"""
+C Z"""
 
 def test_rps_puzzle_input():
     assert rps(puzzle_input) == 11449
@@ -19,8 +20,10 @@ def test_rps_puzzle_input():
 def test_rps2_puzzle_input():
     assert rps2(puzzle_input) == 13187
 
-puzzle_input = """
-B Z
+def test_golfed_puzzle():
+    assert t(puzzle_input) == 13187
+
+puzzle_input = """B Z
 A X
 B Z
 B Z
@@ -2519,5 +2522,4 @@ A X
 C Y
 A X
 A X
-C Y
-"""
+C Y"""
