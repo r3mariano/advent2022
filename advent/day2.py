@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 
+@dataclass
 class _Rule:
     beats: str
     equal: str
@@ -61,4 +62,4 @@ def rps2(input: str) -> int:
         total += _rps2_lookup[line]
     return total
 
-t=lambda i:sum([3,1,2,4,5,6,8,9,7][ord(l[0])+ord(l[2])*3-329]for l in i.split('\n'))
+t=lambda i:sum(int('312456897'[ord(l[0])+ord(l[2])*3-329])for l in i.split('\n'))
