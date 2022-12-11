@@ -1,11 +1,17 @@
-from advent.day5 import crates
+from advent.day5 import crate9000, crate9001
 
 
-def test_crate_sample_input():
-    assert crates(sample_input) == 'CMZ'
+def test_crate9000_sample_input():
+    assert crate9000(sample_input) == 'CMZ'
 
-def test_crate_puzzle_input():
-    assert crates(puzzle_input) == 'FWNSHLDNZ'
+def test_crate9000_puzzle_input():
+    assert crate9000(puzzle_input) == 'FWNSHLDNZ'
+
+def test_crate9001_sample_input():
+    assert crate9001(sample_input) == 'MCD'
+
+def test_crate9001_puzzle_input():
+    assert crate9001(puzzle_input) == 'RNRGDNFQG'
 
 sample_input = """
     [D]    
