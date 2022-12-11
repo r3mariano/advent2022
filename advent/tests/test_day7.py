@@ -1,4 +1,4 @@
-from advent.day7 import fser
+from advent.day7 import fser, smallest_delete
 
 
 def test_sample_input():
@@ -6,6 +6,12 @@ def test_sample_input():
 
 def test_puzzle_input():
     assert fser(puzzle_input) == 919137
+
+def test_smallest_delete_sample_input():
+    assert smallest_delete(sample_input) == 24933642
+
+def test_smallest_delete_puzzle_input():
+    assert smallest_delete(puzzle_input) == 2877389
 
 sample_input = """
 $ cd /

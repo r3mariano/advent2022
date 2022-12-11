@@ -39,7 +39,7 @@ class Directory:
     def __contains__(self, name: str):
         return next(self.filter(lambda x: x.name == name), None) is not None
 
-def fser(cli_log: str) -> int:
+def _parse(cli_log: str) -> Directory:
     file_tree = Directory('/', None)
     pwd = file_tree
 
@@ -71,6 +71,20 @@ def fser(cli_log: str) -> int:
             else:
                 # assume a file
                 pwd.files.append(File(name, int(size)))
-    # pprint(file_tree)
+    return file_tree
+
+def fser(cli_log: str) -> int:
+    file_tree = _parse(cli_log)
     # ok, now that we have a tree, get dirs with size < 100_000, and get their sizes
     return sum([dir.size() for dir in file_tree.filter_deep(lambda x: x.size() < 100_000)])
+
+def smallest_delete(cli_log: str) -> int:
+    file_tree = _parse(cli_log)
+
+    disk_size = 70000000
+    target_size = 30000000
+    free_space = disk_size - file_tree.size()
+    target_free_space = target_size - free_space
+    candidates = list(file_tree.filter_deep(lambda x: x.size() >= target_free_space))
+    candidates.sort(key = lambda dir: dir.size())
+    return candidates[0].size()
