@@ -1,4 +1,4 @@
-from advent.day3 import halfsies
+from advent.day3 import halfsies, threesies
 
 
 def test_halfsies_single():
@@ -8,7 +8,13 @@ def test_halfsies_sample_input():
     assert halfsies(sample_input) == 157
 
 def test_halfsies_puzzle_input():
-    assert halfsies(puzzle_input) == 157
+    assert halfsies(puzzle_input) == 7908
+
+def test_threesies_sample_input():
+    assert threesies(sample_input) == 70
+
+def test_threesies_puzzle_input():
+    assert threesies(puzzle_input) == 2838
 
 sample_input = """vJrwpWtwJgWrhcsFMMfFFhFp
 jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
